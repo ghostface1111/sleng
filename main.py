@@ -5,11 +5,14 @@ meme_dict={
     "ЩИЩ": "одобрение или восторг",
     "КРИПОВЫЙ": "страшный, пугающий",
     "АГРИТЬСЯ": "злиться"
-}
 
-word = input("Введите непонятное слово (большими буквами!): ")
+} 
+while True:
+    word = input("Введите непонятное слово (большими буквами!): ").upper()
 
-if word in meme_dict.keys():
-    print(meme_dict[word])
-else:
-    print("Нет такого слово")
+    if word in meme_dict.keys():
+        print(meme_dict[word])
+    else:
+        print("Добавим сейчас!")
+        value = input("введите значение "+word+": ")
+        meme_dict[word] = value
